@@ -14,7 +14,7 @@
  * @var \App\View\AppView $this
  */
 
-$cakeDescription = 'CakePHP: the rapid development php framework';
+$cakeDescription = 'AlgoTrader';
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,7 +22,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-        <?= $cakeDescription ?>:
+        <?= $cakeDescription ?> -
         <?= $this->fetch('title') ?>
     </title>
     <?= $this->Html->meta('icon') ?>
@@ -39,6 +39,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <a href="<?= $this->Url->build('/') ?>"><span>Algo</span>Trader</a>
         </div>
         <div class="top-nav-links">
+            <?= $this->Html->link('Home', ['controller' => 'Pages', 'action' => 'display', 'home']) ?>
             <?= $this->Html->link('Exchanges', ['controller' => 'Exchanges', 'action' => 'index']) ?>
             <?= $this->Html->link('Symbols', ['controller' => 'Symbols', 'action' => 'index']) ?>
         </div>
